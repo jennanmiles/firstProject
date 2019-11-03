@@ -1,0 +1,217 @@
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro&display=swap');
+
+$font-headline: 'Playfair Display', serif;
+$font-body: 'Source Sans Pro', sans-serif;
+
+// colors
+$peach: #FFC3A4;
+$aqua: #BCD6D2;
+$champagne: #F0E3D1;
+$blue: #5E7D8E; 
+$gray: #4D5057; 
+$mocha: #a99478; 
+$lightMocha: #ccb89d;   
+$lightGray: #d4d2cc;
+
+// styles
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#f6f6f3;
+
+} 
+
+// navigation
+nav {
+    display: block; 
+    position: fixed;
+    width: 100%;
+    background-color: $mocha;
+    top: 0;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 100;
+
+    .logo {
+        font-family: $font-headline;
+        color: black;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5em;
+        text-decoration: none;
+        text-transform: uppercase;        
+    }    
+
+    ul {
+        display: flex; 
+        flex-direction: row;
+        justify-content: flex-end;
+
+        a.navItem {
+            color: white;
+            font-family: $font-body;
+            padding: 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 900;
+
+            &:hover, &:visited {
+                text-decoration: none;
+            }
+        }
+    }
+} 
+
+.contentWrapper {
+    position: relative;
+    margin-top: 100px;
+    padding: 5%;
+    box-sizing: border-box;
+    width: 75%;
+    margin: 100px auto 50px auto;
+
+    &.portfolio {
+        width: 100%; 
+    }
+
+    h1 {
+        color: white;
+        background-color: $blue;
+        font-size: 1.75em;
+        padding: 10px 20px;
+        margin: -50% auto 0 auto;
+        position: relative;
+        font-family: $font-headline;
+        letter-spacing: 2px;
+        text-align: center;
+        font-weight: 300;
+        width: auto;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);        
+    }
+
+    .myPhoto {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        border: 15px solid white;
+        box-sizing: border-box;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+    
+    p {
+        font-family: $font-body;
+        font-size: 1em;
+        line-height: 1.75em;
+        padding: 0;
+        margin: 1em auto; 
+    }
+
+    .portfolioWrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 30px auto;
+
+        .portfolioPiece {
+            width: calc(100% / 3 - 4%);
+            height: 250px;
+            margin: 2%;
+            background-color: #ccb89d70;
+
+            .portText {
+                font-family: $font-body;
+                color: white;
+                font-size: 1em;
+                text-align: center;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    form {
+        input, textarea {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            margin: 10px auto;
+            font-size: 1em;
+
+            &:focus {
+                outline: none;
+                border: 2px solid #ccc;
+            }
+        }
+
+        .formLabels {
+            font-size: 1.25em;
+            margin: 1em auto 0 0;
+        }
+
+        button {
+            background-color: $lightMocha;
+            color:black;
+            padding: 10px;
+            border: none;
+            font-family: $font-body;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 50px auto;
+            position: relative;
+            font-size: 1em;
+            border: 2px solid #f6f6f3;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:hover, &:visited, &:active {
+                border: 2px solid #ccc;
+                background-color: $mocha;
+                color: white;
+            }
+        }
+    }
+}
+
+
+// footer 
+
+footer {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+
+    .copyright {
+        color: white;
+        text-align: center;
+        display: block;
+        font-size: .75em;
+        letter-spacing: 1px;
+        padding: 1em;
+        font-family: $font-body;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
